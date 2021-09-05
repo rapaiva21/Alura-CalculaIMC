@@ -7,8 +7,8 @@ for (var i = 0; i < pacientes.length; i++){
     var tdAltura = paciente.querySelector(".info-altura");
     var altura = tdAltura.textContent;
     var tdImc = paciente.querySelector(".info-imc");
-    var imc = peso / (altura * altura)
-    tdImc.textContent = imc.toFixed(2);
+    
+    
 
     var pesoEhValido = true;
     var alturaEhValido = true;
@@ -26,8 +26,7 @@ for (var i = 0; i < pacientes.length; i++){
     }
 
     if (pesoEhValido && alturaEhValido){
-        var imc = calculaImc(peso, altura);
-        tdImc.textContent = calculaImc(imc);
+        tdImc.textContent = calculaImc(peso, altura);
     }
 };
 
@@ -35,7 +34,7 @@ function calculaImc(peso, altura){
     var imc = 0;
     imc = peso / (altura * altura);
     return imc.toFixed(2);
-}
+};
 
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 botaoAdicionar.addEventListener("click", function(event){
@@ -66,7 +65,6 @@ botaoAdicionar.addEventListener("click", function(event){
     pacienteTr.appendChild(gorduraTd);
     pacienteTr.appendChild(imcTd);
 
-    console.log(nomeTd);
-
-
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
 });
