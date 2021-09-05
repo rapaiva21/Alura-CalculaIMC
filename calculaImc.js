@@ -25,3 +25,10 @@ for (var i = 0; i < pacientes.length; i++){
         paciente.classList.add("paciente-invalido");
     }
 };
+
+var botaoAdicionar = document.querySelector("#form-adiciona");
+botaoAdicionar.addEventListener("click", function(event){
+    event.preventDefault()
+    console.log("teste do botaoAdicionar")
+
+});
