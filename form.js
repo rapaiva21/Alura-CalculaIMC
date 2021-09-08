@@ -25,16 +25,27 @@ function obtemPacienteDoFormulario(form){
 
 function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
-    var nomeTd = document.createElement("td");
-    var pesoTd = document.createElement("td");
-    var alturaTd = document.createElement("td");
-    var gorduraTd = document.createElement("td");
-    var imcTd = document.createElement("td");
+    pacienteTr.classList.add("paciente");
+    
 
+    var nomeTd = document.createElement("td");
+    nomeTd.classList.add("info-nome");
     nomeTd.textContent = paciente.nome;
+
+    var pesoTd = document.createElement("td");
+    pesoTd.classList.add("info-peso");
     pesoTd.textContent = paciente.peso;
+
+    var alturaTd = document.createElement("td");
+    alturaTd.classList.add("info-altura");
     alturaTd.textContent = paciente.altura;
+
+    var gorduraTd = document.createElement("td");
+    gorduraTd.classList.add("info-gordura");
     gorduraTd.textContent = paciente.gordura;
+    
+    var imcTd = document.createElement("td");
+    imcTd.classList.add("info-imc");
     imcTd.textContent = paciente.imc;
         
     pacienteTr.appendChild(nomeTd);
